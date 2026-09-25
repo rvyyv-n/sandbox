@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs><clipPath id="sq"><rect x="24" y="24" width="976" height="976" rx="236"/></clipPath>
+  <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="drop" x="-20%" y="-20%" width="140%" height="160%">
+    <feGaussianBlur stdDeviation="18"/><feOffset dy="18"/>
+  </filter>
+
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#18181b"/><stop offset="1" stop-color="#0c0c0e"/>
+  </linearGradient>
+  <linearGradient id="vio" x1="544" y1="282" x2="884" y2="742" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#b9a3ff"/><stop offset="1" stop-color="#7c5cff"/>
+  </linearGradient>
+</defs>
+<g clip-path="url(#sq)">
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z" fill="#f4f4f5"/>
+  <path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z" fill="url(#vio)"/>
+  <rect x="24" y="24" width="976" height="976" rx="236" fill="none" stroke="url(#rim)" stroke-width="6"/>
+</g>
+</svg>
