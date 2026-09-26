@@ -1,6 +1,6 @@
 # t3code-icons
 
-Dark-mode replacement icons for [T3 Code](https://github.com/pingdotgg/t3code), made because the nightly build's icon was a bit much.
+Replacement icons for [T3 Code](https://github.com/pingdotgg/t3code), made because the nightly build's icon was a bit much.
 
 ![preview](preview.png)
 
@@ -9,6 +9,7 @@ Dark-mode replacement icons for [T3 Code](https://github.com/pingdotgg/t3code), 
 | <img src="icons/graphite.png" width="48"> | `graphite` | Charcoal tile, silver T3. The clean one. |
 | <img src="icons/midnight.png" width="48"> | `midnight` | Navy-black with a small crescent, a quiet nod to "nightly". |
 | <img src="icons/accent.png" width="48"> | `accent` | Near-black, white T, violet 3. |
+| <img src="icons/coral.png" width="48"> | `coral` | Flat Claude coral and ivory, made to sit next to the Claude app in the taskbar. |
 
 Each variant in [`icons/`](icons) comes as `.svg` (source), `.png` (1024px) and `.ico` (16–256px, for Windows).
 

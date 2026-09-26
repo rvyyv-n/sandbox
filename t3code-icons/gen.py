@@ -90,6 +90,15 @@ variants["accent"] = f"""
 </g>
 """
 
+# Coral: flat, to sit next to Claude's icon (Claude coral tile, ivory mark, slightly smaller glyph)
+variants["coral"] = f"""
+<defs>{DEFS}</defs>
+<g clip-path="url(#sq)">
+  <rect width="{S}" height="{S}" fill="#d97757"/>
+  {glyph("#faf9f5", 'transform="translate(512 512) scale(.88) translate(-512 -512)"')}
+</g>
+"""
+
 
 def render(name, body):
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{S}" height="{S}" viewBox="0 0 {S} {S}">{body}</svg>'
