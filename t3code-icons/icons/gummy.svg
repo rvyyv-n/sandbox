@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs><clipPath id="sq"><rect x="24" y="24" width="976" height="976" rx="236"/></clipPath>
+  <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="drop" x="-20%" y="-20%" width="140%" height="160%">
+    <feGaussianBlur stdDeviation="18"/><feOffset dy="18"/>
+  </filter>
+
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#ffe0f0"/><stop offset="1" stop-color="#c9b8ff"/>
+  </linearGradient>
+  <linearGradient id="jelly" x1="0" y1="250" x2="0" y2="780" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ff6fa8"/><stop offset="1" stop-color="#e0106a"/>
+  </linearGradient>
+  <filter id="gel" filterUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="26" result="b"/>
+    <feDiffuseLighting in="b" surfaceScale="11" diffuseConstant="1.05" lighting-color="#fff" result="d"><fePointLight x="250" y="60" z="920"/></feDiffuseLighting><feComposite in="SourceGraphic" in2="d" operator="arithmetic" k1="1" result="base"/>
+    <feSpecularLighting in="b" surfaceScale="11" specularConstant="0.95" specularExponent="22" lighting-color="#fff" result="s">
+      <fePointLight x="250" y="60" z="460"/></feSpecularLighting>
+    <feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/>
+    <feComposite in="base" in2="s2" operator="arithmetic" k2="1" k3="1"/>
+  </filter>
+  <filter id="shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024">
+    <feGaussianBlur stdDeviation="26"/><feOffset dy="34"/>
+  </filter>
+</defs>
+<g clip-path="url(#sq)">
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <g fill="#b0104f" stroke="#b0104f" stroke-width="24" stroke-linejoin="round" filter="url(#shadow)" opacity=".45"><g transform="translate(512 512) scale(0.86) translate(-512 -512)"><path transform="translate(-14 0)" d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path transform="translate(14 0)" d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g></g>
+  <g fill="url(#jelly)" stroke="url(#jelly)" stroke-width="24" stroke-linejoin="round" filter="url(#gel)"><g transform="translate(512 512) scale(0.86) translate(-512 -512)"><path transform="translate(-14 0)" d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path transform="translate(14 0)" d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g></g>
+</g>
+</svg>
