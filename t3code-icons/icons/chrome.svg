@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs><clipPath id="sq"><rect x="24" y="24" width="976" height="976" rx="236"/></clipPath>
+  <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="drop" x="-20%" y="-20%" width="140%" height="160%">
+    <feGaussianBlur stdDeviation="18"/><feOffset dy="18"/>
+  </filter>
+
+  <radialGradient id="bg" cx="50%" cy="40%" r="75%">
+    <stop offset="0" stop-color="#1c2b5a"/><stop offset=".6" stop-color="#070a18"/><stop offset="1" stop-color="#020308"/>
+  </radialGradient>
+  <linearGradient id="metal" x1="0" y1="250" x2="0" y2="780" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#b9d4ff"/><stop offset=".47" stop-color="#46618f"/>
+    <stop offset=".5" stop-color="#0d1426"/><stop offset=".53" stop-color="#4a3a2a"/><stop offset=".72" stop-color="#e9cfa6"/>
+    <stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <filter id="shine" filterUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="16" result="b"/>
+    <feMerge result="base"><feMergeNode in="SourceGraphic"/></feMerge>
+    <feSpecularLighting in="b" surfaceScale="10" specularConstant="1.6" specularExponent="40" lighting-color="#fff" result="s">
+      <fePointLight x="700" y="120" z="380"/></feSpecularLighting>
+    <feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/>
+    <feComposite in="base" in2="s2" operator="arithmetic" k2="1" k3="1"/>
+  </filter>
+  <filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><feGaussianBlur stdDeviation="30"/></filter>
+</defs>
+<g clip-path="url(#sq)">
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <g fill="#6f8cff" stroke="#6f8cff" stroke-width="60" stroke-linejoin="round" filter="url(#glow)" opacity=".7"><g transform="translate(512 512) scale(0.86) translate(-512 -512)"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g></g>
+  <g fill="#0a0f22" stroke="#0a0f22" stroke-width="58" stroke-linejoin="round" ><g transform="translate(512 512) scale(0.86) translate(-512 -512)"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g></g>
+  <g fill="url(#metal)" stroke="url(#metal)" stroke-width="22" stroke-linejoin="round" filter="url(#shine)"><g transform="translate(512 512) scale(0.86) translate(-512 -512)"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g></g>
+  <path d="M820 132 Q830.44 179.56 878 190 Q830.44 200.44 820 248 Q809.56 200.44 762 190 Q809.56 179.56 820 132Z" fill="#fff" opacity="1"/><path d="M190 786 Q196.12 813.88 224 820 Q196.12 826.12 190 854 Q183.88 826.12 156 820 Q183.88 813.88 190 786Z" fill="#fff" opacity="0.8"/><path d="M880 678 Q883.96 696.04 902 700 Q883.96 703.96 880 722 Q876.04 703.96 858 700 Q876.04 696.04 880 678Z" fill="#fff" opacity="0.6"/><path d="M150 182 Q153.24 196.76 168 200 Q153.24 203.24 150 218 Q146.76 203.24 132 200 Q146.76 196.76 150 182Z" fill="#fff" opacity="0.5"/>
+  <rect x="24" y="24" width="976" height="976" rx="236" fill="none" stroke="url(#rim)" stroke-width="6"/>
+</g>
+</svg>

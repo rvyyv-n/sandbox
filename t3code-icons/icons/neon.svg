@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs><clipPath id="sq"><rect x="24" y="24" width="976" height="976" rx="236"/></clipPath>
+  <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="drop" x="-20%" y="-20%" width="140%" height="160%">
+    <feGaussianBlur stdDeviation="18"/><feOffset dy="18"/>
+  </filter>
+
+  <pattern id="brick" width="160" height="80" patternUnits="userSpaceOnUse">
+    <rect width="160" height="80" fill="#140f1c"/>
+    <path d="M0 0.5H160M0 40.5H160M0.5 0V40M80.5 40V80" stroke="#07050b" stroke-width="7"/>
+  </pattern>
+  <radialGradient id="vig" cx="50%" cy="50%" r="70%">
+    <stop offset=".35" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".85"/>
+  </radialGradient>
+  <filter id="haze" filterUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><feGaussianBlur stdDeviation="46"/></filter>
+  <filter id="halo" filterUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024"><feGaussianBlur stdDeviation="12"/></filter>
+  <clipPath id="left"><rect width="522" height="1024"/></clipPath>
+  <clipPath id="right"><rect x="522" width="1024" height="1024"/></clipPath>
+</defs>
+<g clip-path="url(#sq)">
+  <rect width="1024" height="1024" fill="url(#brick)"/>
+  <ellipse cx="330" cy="512" rx="360" ry="300" fill="#ff2fb4" opacity=".16" filter="url(#haze)"/>
+  <ellipse cx="720" cy="512" rx="340" ry="300" fill="#22e6ff" opacity=".14" filter="url(#haze)"/>
+  <g clip-path="url(#left)">
+      <g fill="none" stroke="#ff2fb4" stroke-linejoin="round" transform="translate(512 512) scale(0.8) translate(-512 -512)">
+        <g filter="url(#haze)" stroke-width="40" opacity=".9"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g>
+        <g filter="url(#halo)" stroke-width="30"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g>
+        <g stroke-width="26"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g>
+      </g></g>
+  <g clip-path="url(#right)">
+      <g fill="none" stroke="#22e6ff" stroke-linejoin="round" transform="translate(512 512) scale(0.8) translate(-512 -512)">
+        <g filter="url(#haze)" stroke-width="40" opacity=".9"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g>
+        <g filter="url(#halo)" stroke-width="30"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g>
+        <g stroke-width="26"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g>
+      </g></g>
+  <g fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="9" stroke-linejoin="round" transform="translate(512 512) scale(0.8) translate(-512 -512)"><path d="M140 282 H500 V386 H384 V742 H256 V386 H140 Z"/><path d="M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z"/></g>
+  <rect width="1024" height="1024" fill="url(#vig)"/>
+  <rect x="24" y="24" width="976" height="976" rx="236" fill="none" stroke="url(#rim)" stroke-width="6"/>
+</g>
+</svg>

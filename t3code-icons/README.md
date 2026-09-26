@@ -11,6 +11,21 @@ Replacement icons for [T3 Code](https://github.com/pingdotgg/t3code), made becau
 | <img src="icons/accent.png" width="48"> | `accent` | Near-black, white T, violet 3. |
 | <img src="icons/coral.png" width="48"> | `coral` | Flat Claude coral and ivory, made to sit next to the Claude app in the taskbar. |
 
+## Stylised set
+
+Louder alternate icons in the spirit of Arc's app icons. Each one is a different material.
+
+![stylised preview](preview-styled.png)
+
+| | Variant | Vibe |
+|---|---|---|
+| <img src="icons/neon.png" width="48"> | `neon` | Pink and cyan neon tubing on a dark brick wall. |
+| <img src="icons/gummy.png" width="48"> | `gummy` | Glossy raspberry jelly on a pastel tile. |
+| <img src="icons/fluted.png" width="48"> | `fluted` | Sunset gradient behind ribbed fluted glass. |
+| <img src="icons/chrome.png" width="48"> | `chrome` | Y2K liquid chrome with sparkles. |
+| <img src="icons/sketch.png" width="48"> | `sketch` | Ballpoint doodle on graph paper. |
+| <img src="icons/pixel.png" width="48"> | `pixel` | 32×32 pixel art, so it's pixel-perfect at 32px. |
+
 Each variant in [`icons/`](icons) comes as `.svg` (source), `.png` (1024px) and `.ico` (16–256px, for Windows).
 
 ## Using one on Windows
@@ -30,7 +45,7 @@ This only changes shortcuts. The running app's window and unpinned taskbar butto
 
 ## Regenerating
 
-The glyph is hand-drawn as SVG paths in [`gen.py`](gen.py); each variant is just a background and fill on top of it. Edit colours there and run:
+The glyph is hand-drawn as SVG paths in [`gen.py`](gen.py). The core variants are just a background and fill on top of it. The stylised set gets its materials from SVG filters (lighting, displacement and noise); the pixel icon is rasterised from the same glyph. Edit them there and run:
 
 ```sh
 pip install pillow
