@@ -28,6 +28,8 @@ louder alternates in the spirit of arc's app icons. each one is a different mate
 
 each variant in [`icons/`](icons) comes as `.svg` (source), `.png` (1024px) and `.ico` (16–256px, for windows).
 
+no need to clone: open the file in [`icons/`](icons) and hit the download button to grab a single `.ico` or `.png`.
+
 ## using one on windows
 
 right-click the t3 code shortcut, open **properties**, click **change icon…** and pick the `.ico`. for a pinned taskbar icon, change the shortcut in `%APPDATA%\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar`.
@@ -52,3 +54,7 @@ python gen.py            # all variants (or: python gen.py midnight)
 ```
 
 it renders through headless chrome, so set `CHROME=/path/to/chrome` if it isn't at the default windows location.
+
+## license
+
+the code and artwork here are mit licensed, see [`LICENSE`](../LICENSE). the "t3" lettering is a redraw made for fun and isn't affiliated with t3 code or its makers, so use it in the same spirit.
