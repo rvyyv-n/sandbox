@@ -16,10 +16,10 @@ Quiet dark tiles that sit well in a taskbar.
 
 <table>
 <tr>
-<td align="center" width="25%"><img src="icons/graphite.png" width="96" alt="graphite"><br><b><code>graphite</code></b><br><sub>Charcoal tile, silver T3. The clean one.</sub></td>
-<td align="center" width="25%"><img src="icons/midnight.png" width="96" alt="midnight"><br><b><code>midnight</code></b><br><sub>Navy-black with a small crescent, a quiet nod to "nightly".</sub></td>
-<td align="center" width="25%"><img src="icons/accent.png" width="96" alt="accent"><br><b><code>accent</code></b><br><sub>Near-black, white T, violet 3.</sub></td>
-<td align="center" width="25%"><img src="icons/coral.png" width="96" alt="coral"><br><b><code>coral</code></b><br><sub>Flat Claude coral and ivory, made to sit next to the Claude app.</sub></td>
+<td align="center" valign="top" width="25%"><img src="icons/graphite.png" width="96" alt="graphite"><br><b><code>graphite</code></b><br><sub>Charcoal tile, silver T3. The clean one.</sub></td>
+<td align="center" valign="top" width="25%"><img src="icons/midnight.png" width="96" alt="midnight"><br><b><code>midnight</code></b><br><sub>Navy-black with a small crescent, a quiet nod to "nightly".</sub></td>
+<td align="center" valign="top" width="25%"><img src="icons/accent.png" width="96" alt="accent"><br><b><code>accent</code></b><br><sub>Near-black, white T, violet 3.</sub></td>
+<td align="center" valign="top" width="25%"><img src="icons/coral.png" width="96" alt="coral"><br><b><code>coral</code></b><br><sub>Flat Claude coral and ivory, made to sit next to the Claude app.</sub></td>
 </tr>
 </table>
 
@@ -29,14 +29,14 @@ Louder alternate icons in the spirit of Arc's app icons. Each one is a different
 
 <table>
 <tr>
-<td align="center" width="33%"><img src="icons/neon.png" width="96" alt="neon"><br><b><code>neon</code></b><br><sub>Pink and cyan neon tubing on a dark brick wall.</sub></td>
-<td align="center" width="33%"><img src="icons/gummy.png" width="96" alt="gummy"><br><b><code>gummy</code></b><br><sub>Glossy raspberry jelly on a pastel tile.</sub></td>
-<td align="center" width="33%"><img src="icons/fluted.png" width="96" alt="fluted"><br><b><code>fluted</code></b><br><sub>Sunset gradient behind ribbed fluted glass.</sub></td>
+<td align="center" valign="top" width="33%"><img src="icons/neon.png" width="96" alt="neon"><br><b><code>neon</code></b><br><sub>Pink and cyan neon tubing on a dark brick wall.</sub></td>
+<td align="center" valign="top" width="33%"><img src="icons/gummy.png" width="96" alt="gummy"><br><b><code>gummy</code></b><br><sub>Glossy raspberry jelly on a pastel tile.</sub></td>
+<td align="center" valign="top" width="33%"><img src="icons/fluted.png" width="96" alt="fluted"><br><b><code>fluted</code></b><br><sub>Sunset gradient behind ribbed fluted glass.</sub></td>
 </tr>
 <tr>
-<td align="center"><img src="icons/chrome.png" width="96" alt="chrome"><br><b><code>chrome</code></b><br><sub>Y2K liquid chrome with sparkles.</sub></td>
-<td align="center"><img src="icons/sketch.png" width="96" alt="sketch"><br><b><code>sketch</code></b><br><sub>Ballpoint doodle on graph paper.</sub></td>
-<td align="center"><img src="icons/pixel.png" width="96" alt="pixel"><br><b><code>pixel</code></b><br><sub>32×32 pixel art, so it's pixel-perfect at 32px.</sub></td>
+<td align="center" valign="top"><img src="icons/chrome.png" width="96" alt="chrome"><br><b><code>chrome</code></b><br><sub>Y2K liquid chrome with sparkles.</sub></td>
+<td align="center" valign="top"><img src="icons/sketch.png" width="96" alt="sketch"><br><b><code>sketch</code></b><br><sub>Ballpoint doodle on graph paper.</sub></td>
+<td align="center" valign="top"><img src="icons/pixel.png" width="96" alt="pixel"><br><b><code>pixel</code></b><br><sub>32×32 pixel art, so it's pixel-perfect at 32px.</sub></td>
 </tr>
 </table>
 
