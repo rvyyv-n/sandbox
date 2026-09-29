@@ -1,7 +1,7 @@
-"""Generate replacement T3 Code icons.
+"""generate replacement t3 code icons.
 
-Each variant is written as SVG, rendered to a 1024px PNG with headless Chrome,
-then packed into a multi-size Windows .ico. The preview sheets are rebuilt at the end.
+each variant is written as svg, rendered to a 1024px png with headless chrome,
+then packed into a multi-size windows .ico. the preview sheets are rebuilt at the end.
 
     python gen.py              # everything
     python gen.py neon         # just one
@@ -16,7 +16,7 @@ CHROME = os.environ.get("CHROME", r"C:\Program Files\Google\Chrome\Application\c
 S = 1024
 ICO_SIZES = (16, 24, 32, 48, 64, 128, 256)
 
-# Hand-drawn geometric "T3" as filled outlines (heavy verticals, slightly lighter horizontals).
+# hand-drawn geometric "t3" as filled outlines (heavy verticals, slightly lighter horizontals).
 T_PATH = "M140 282 H500 V386 H384 V742 H256 V386 H140 Z"
 THREE_PATH = ("M544 282 H872 V376 L782 462 C846 470 884 522 884 602 C884 692 830 742 700 742 H544 V638 H700 "
               "C740 638 756 622 756 602 C756 582 740 566 700 566 H624 V478 L724 386 H544 Z")
@@ -37,7 +37,7 @@ RIM = '<rect x="24" y="24" width="976" height="976" rx="236" fill="none" stroke=
 
 variants = {}
 
-# Graphite: charcoal tile, soft silver T3
+# graphite: charcoal tile, soft silver t3
 variants["graphite"] = f"""
 <defs>{DEFS}
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
@@ -55,7 +55,7 @@ variants["graphite"] = f"""
 </g>
 """
 
-# Midnight: deep navy-black, pale T3, small crescent for "nightly"
+# midnight: deep navy-black, pale t3, small crescent for "nightly"
 variants["midnight"] = f"""
 <defs>{DEFS}
   <radialGradient id="bg" cx="70%" cy="10%" r="100%">
@@ -72,7 +72,7 @@ variants["midnight"] = f"""
 </g>
 """
 
-# Accent: flat near-black, white T, violet 3
+# accent: flat near-black, white t, violet 3
 variants["accent"] = f"""
 <defs>{DEFS}
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
@@ -90,7 +90,7 @@ variants["accent"] = f"""
 </g>
 """
 
-# Coral: flat, to sit next to Claude's icon (Claude coral tile, ivory mark, slightly smaller glyph)
+# coral: flat, to sit next to claude's icon (claude coral tile, ivory mark, slightly smaller glyph)
 variants["coral"] = f"""
 <defs>{DEFS}</defs>
 <g clip-path="url(#sq)">
@@ -100,23 +100,23 @@ variants["coral"] = f"""
 """
 
 
-# --- Stylised set (Arc-style alternate icons) -------------------------------
-# Built lazily: some need extra assets (displacement maps, a rasterised glyph mask).
+# --- stylised set (arc-style alternate icons) -------------------------------
+# built lazily: some need extra assets (displacement maps, a rasterised glyph mask).
 
 def scaled(k):
     return f'transform="translate(512 512) scale({k}) translate(-512 -512)"'
 
 def puffy(fill, k=.86, r=44, spread=0, extra=""):
-    """Glyph with rounded, inflated corners (fill + same-colour round-join stroke).
+    """glyph with rounded, inflated corners (fill + same-colour round-join stroke).
 
-    `spread` nudges the T and 3 apart so inflated letters don't fuse.
+    `spread` nudges the t and 3 apart so inflated letters don't fuse.
     """
     return (f'<g fill="{fill}" stroke="{fill}" stroke-width="{r}" stroke-linejoin="round" {extra}>'
             f'<g {scaled(k)}><path transform="translate({-spread} 0)" d="{T_PATH}"/>'
             f'<path transform="translate({spread} 0)" d="{THREE_PATH}"/></g></g>')
 
 def bevel(fid, blur, height, spec, shine, light=(260, 80, 520), diffuse=True):
-    """Lighting filter that turns a flat shape into a lit, rounded surface."""
+    """lighting filter that turns a flat shape into a lit, rounded surface."""
     lx, ly, lz = light
     shade = (f'<feDiffuseLighting in="b" surfaceScale="{height}" diffuseConstant="1.05" lighting-color="#fff" result="d">'
              f'<fePointLight x="{lx}" y="{ly}" z="{lz * 2}"/></feDiffuseLighting>'
@@ -304,7 +304,7 @@ def sketch():
 
 
 def glyph_mask(cells, k):
-    """Coverage of the glyph per cell on a cells x cells grid (0..1)."""
+    """coverage of the glyph per cell on a cells x cells grid (0..1)."""
     tmp = OUT / "_mask.png"
     shoot(f'<rect width="{S}" height="{S}" fill="#000"/>{glyph("#fff", scaled(k))}', tmp)
     m = Image.open(tmp).convert("L").resize((cells, cells), Image.BOX)
@@ -358,7 +358,7 @@ def pixel():
 
 styled = {"neon": neon, "gummy": gummy, "fluted": fluted, "chrome": chrome, "sketch": sketch, "pixel": pixel}
 
-# Pixel art is scaled with nearest-neighbour wherever the size is a whole multiple of its grid,
+# pixel art is scaled with nearest-neighbour wherever the size is a whole multiple of its grid,
 # so the 32/64/128/256px frames stay sharp instead of being smoothed.
 CRISP = {"pixel": 32}
 
@@ -393,7 +393,7 @@ def render(name, body):
 
 
 def pack(name):
-    """Recompress the rendered PNG losslessly and build the .ico from it."""
+    """recompress the rendered png losslessly and build the .ico from it."""
     path = OUT / f"{name}.png"
     png = Image.open(path).convert("RGBA")
     png.save(path, optimize=True)
@@ -402,7 +402,7 @@ def pack(name):
 
 
 def preview(names, path, per_row=4):
-    """Large tile plus 48/32/16px thumbnails for each variant, on a dark background."""
+    """large tile plus 48/32/16px thumbnails for each variant, on a dark background."""
     rows = -(-len(names) // per_row)
     cols = min(len(names), per_row)
     sheet = Image.new("RGBA", (cols * 272 + 16, rows * 352 + 16), (32, 32, 32, 255))
