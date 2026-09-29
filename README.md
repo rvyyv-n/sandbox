@@ -1,7 +1,7 @@
 # side-quests
 
-Small one-off projects and tasks that don't deserve their own repo. Each one lives in its own folder with its own README.
+small one-off projects that don't deserve their own repo. each one lives in its own folder with its own readme.
 
-| Project | What it is |
+| | |
 |---|---|
-| [`t3code-icons`](t3code-icons) | Replacement icons for T3 Code (SVG / PNG / ICO + generator script) |
+| [`t3code-icons`](t3code-icons) | replacement icons for t3 code |
