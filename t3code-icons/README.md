@@ -4,6 +4,8 @@ replacement icons for [t3 code](https://github.com/pingdotgg/t3code), made becau
 
 ![preview](preview.png)
 
+i'm running `pixel`.
+
 | | variant | vibe |
 |---|---|---|
 | <img src="icons/graphite.png" width="40"> | `graphite` | charcoal tile, silver t3. the clean one. |
