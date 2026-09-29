@@ -5,5 +5,6 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# render scratch files
+# render scratch files (left behind if a render is interrupted)
 _*.html
+_*.png
