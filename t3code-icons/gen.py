@@ -1,7 +1,7 @@
-"""Generate dark-mode T3 Code icons.
+"""Generate replacement T3 Code icons.
 
 Each variant is written as SVG, rendered to a 1024px PNG with headless Chrome,
-then packed into a multi-size Windows .ico. A preview sheet is rebuilt at the end.
+then packed into a multi-size Windows .ico. The preview sheets are rebuilt at the end.
 
     python gen.py              # everything
     python gen.py neon         # just one
@@ -358,6 +358,17 @@ def pixel():
 
 styled = {"neon": neon, "gummy": gummy, "fluted": fluted, "chrome": chrome, "sketch": sketch, "pixel": pixel}
 
+# Pixel art is scaled with nearest-neighbour wherever the size is a whole multiple of its grid,
+# so the 32/64/128/256px frames stay sharp instead of being smoothed.
+CRISP = {"pixel": 32}
+
+
+def shrink(im, name, size):
+    grid = CRISP.get(name)
+    if grid and size % grid == 0:
+        return im.resize((grid, grid), Image.BOX).resize((size, size), Image.NEAREST)
+    return im.resize((size, size), Image.LANCZOS)
+
 
 def shoot(body, png_path):
     svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{S}" height="{S}" viewBox="0 0 {S} {S}">{body}</svg>'
@@ -378,8 +389,16 @@ def shoot(body, png_path):
 def render(name, body):
     svg = shoot(body, OUT / f"{name}.png")
     (OUT / f"{name}.svg").write_text(svg, encoding="utf-8")
-    png = Image.open(OUT / f"{name}.png").convert("RGBA")
-    png.resize((256, 256), Image.LANCZOS).save(OUT / f"{name}.ico", sizes=[(s, s) for s in ICO_SIZES])
+    pack(name)
+
+
+def pack(name):
+    """Recompress the rendered PNG losslessly and build the .ico from it."""
+    path = OUT / f"{name}.png"
+    png = Image.open(path).convert("RGBA")
+    png.save(path, optimize=True)
+    frames = [shrink(png, name, s) for s in ICO_SIZES]
+    frames[-1].save(OUT / f"{name}.ico", sizes=[f.size for f in frames], append_images=frames[:-1])
 
 
 def preview(names, path, per_row=4):
@@ -390,15 +409,19 @@ def preview(names, path, per_row=4):
     for i, n in enumerate(names):
         im = Image.open(OUT / f"{n}.png").convert("RGBA")
         x, y = 16 + i % per_row * 272, 16 + i // per_row * 352
-        sheet.alpha_composite(im.resize((256, 256), Image.LANCZOS), (x, y))
+        sheet.alpha_composite(shrink(im, n, 256), (x, y))
         for dx, s in ((0, 48), (60, 32), (104, 16)):
-            sheet.alpha_composite(im.resize((s, s), Image.LANCZOS), (x + dx, y + 272))
-    sheet.save(path)
+            sheet.alpha_composite(shrink(im, n, s), (x + dx, y + 272))
+    sheet.save(path, optimize=True)
 
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
-    for n in sys.argv[1:] or [*variants, *styled]:
+    names = sys.argv[1:] or [*variants, *styled]
+    unknown = [n for n in names if n not in variants and n not in styled]
+    if unknown:
+        sys.exit(f"unknown variant(s): {', '.join(unknown)}\navailable: {', '.join([*variants, *styled])}")
+    for n in names:
         render(n, variants[n] if n in variants else styled[n]())
         print("rendered", n)
     preview(list(variants), HERE / "preview.png")
