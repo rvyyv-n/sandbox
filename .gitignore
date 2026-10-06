@@ -8,3 +8,7 @@ Thumbs.db
 # render scratch files (left behind if a render is interrupted)
 _*.html
 _*.png
+
+# internal plans and audits
+docs/
+

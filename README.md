@@ -17,6 +17,8 @@ small one-off projects that don't deserve their own repo. each one lives in its 
 | | |
 |---|---|
 | [`t3code-icons`](t3code-icons) | replacement icons for t3 code |
+| [`t3code-claude-theme`](t3code-claude-theme) | claude dark and light themes for t3 code |
+| [`usage-limits-mod`](usage-limits-mod) | claude plugin hook for usage limit monitoring and `/limits` |
 
 ## license
 

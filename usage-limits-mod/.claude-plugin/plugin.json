@@ -1,0 +1,6 @@
+{
+  "name": "usage-limits",
+  "version": "0.1.0",
+  "description": "Shows your plan usage limits above the prompt, and adds a /limits command",
+  "author": { "name": "rvyyv-n" }
+}
