@@ -12,6 +12,10 @@ i'm running `pixel`.
 | <img src="icons/midnight.png" width="40"> | `midnight` | navy-black with a small crescent, a quiet nod to "nightly". |
 | <img src="icons/accent.png" width="40"> | `accent` | near-black, white t, violet 3. |
 | <img src="icons/coral.png" width="40"> | `coral` | flat claude coral and ivory, made to sit next to the claude app. |
+| <img src="icons/bone.png" width="40"> | `bone` | warm off-white ceramic tile with dark ink t3. the clean light one. |
+| <img src="icons/noir.png" width="40"> | `noir` | pure pitch-black oled tile, stark white t3. |
+| <img src="icons/braun.png" width="40"> | `braun` | dieter rams warm grey casing, anthracite t3, orange tactile dot. |
+| <img src="icons/nord.png" width="40"> | `nord` | arctic slate tile, polar white t, glacial frost cyan 3. |
 
 ## stylised set
 
@@ -27,6 +31,7 @@ louder alternates in the spirit of arc's app icons. each one is a different mate
 | <img src="icons/chrome.png" width="40"> | `chrome` | y2k liquid chrome with sparkles. |
 | <img src="icons/sketch.png" width="40"> | `sketch` | ballpoint doodle on graph paper. |
 | <img src="icons/pixel.png" width="40"> | `pixel` | 32×32 pixel art, so it's pixel-perfect at 32px. |
+| <img src="icons/cleartech.png" width="40"> | `cleartech` | translucent atomic purple shell with internal circuitry and gold pads. |
 
 each variant in [`icons/`](icons) comes as `.svg` (source), `.png` (1024px) and `.ico` (16–256px, for windows).
 
